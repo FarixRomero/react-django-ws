@@ -7,9 +7,9 @@ const ChatRoom = () => {
 
     useEffect(() => {
         const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE2NDE0NjM5LCJpYXQiOjE3MTU5ODI2MzksImp0aSI6ImRkMDA2ZmU3NzFlYTRkMTY4OTc3MjRiNzc2NzdmMzY2IiwidXNlcl9pZCI6MX0.K7l7D7sX5ZweCut5mgRzQBGyXt4XMPcogGr55XJJghU';
-
         // Conectar al WebSocket con el token en la URL
         const wsUrl = `ws://localhost:8000/ws/notifications/?token=${token}`;
+        // const wsUrl = `ws://localhost:8000/ws/notifications/?user_id=1`;
         webSocket.current = new WebSocket(wsUrl);
         
         webSocket.current.onopen = () => {
